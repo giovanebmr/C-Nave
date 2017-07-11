@@ -21,18 +21,21 @@ int main(){
 		}	
 	}
 	
+	//Loop principal do jogo
 	while( true ){
+		
 		//Imprime a matriz na tela
 		for( int y = 0 ; y < TAMANHO_Y ; y++ ){
 			for( int x = 0 ; x < TAMANHO_X ; x++ ){
 				tela[y][x] = ESPACO;
 			}	
 		}
-	}
+		
+	}//end while
 	
 	
 	
-	printf("teste");
+	
 	
 	return 0;
 }
