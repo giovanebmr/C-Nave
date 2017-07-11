@@ -7,7 +7,7 @@
 //Configurações iniciais
 #define TAMANHO_X 20 //largura utilizável da tela
 #define TAMANHO_Y 20 //altura utilizável da tela
-#const char ESPACO = '*'; //forma dos espaços na matriz
+const char ESPACO = '*'; //forma dos espaços na matriz
 
 
 int main(){
@@ -21,16 +21,18 @@ int main(){
 		}	
 	}
 	
+	int i = 0;
+	
 	//Loop principal do jogo
-	while( true ){
+	while( i < 5 ){
 		
 		//Imprime a matriz na tela
 		for( int y = 0 ; y < TAMANHO_Y ; y++ ){
 			for( int x = 0 ; x < TAMANHO_X ; x++ ){
-				tela[y][x] = ESPACO;
+				printf("%c", tela[y][x] = ESPACO);
 			}	
 		}
-		
+		i++;
 	}//end while
 	
 	
