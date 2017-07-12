@@ -26,7 +26,7 @@ int movimenta_nave_Y(int posicao_nave_Y, char tecla_presionada, int tamanho_Y_te
 int main(){
 	
 	char tela [TAMANHO_Y][TAMANHO_X];
-	char tecla_pressionada = ' ';
+	int tecla_pressionada = 0;
 	
 	//Inicializando a matriz com o caracter definido
 	for( int y = 0 ; y < TAMANHO_Y ; y++ ){
@@ -42,15 +42,18 @@ int main(){
 	while( true ){
 		//verifica tecla pressionada
 		
-		if(_kbhit()){
-			printf("teste");
-			tecla_pressionada = _getch();
+		if(kbhit()){
+			tecla_pressionada = getch();
 			POSICAO_NAVE_Y = movimenta_nave_Y(POSICAO_NAVE_Y, tecla_pressionada, TAMANHO_Y);
 			POSICAO_NAVE_X = movimenta_nave_X(POSICAO_NAVE_X, tecla_pressionada, TAMANHO_X);
 			//atualiza a posicao da nave
 			tela[POSICAO_NAVE_Y][POSICAO_NAVE_X] = FORMATO_NAVE;
+			//pressione 'p' para sair
+			if(tecla_pressionada == 'p'){ 
+				break;
+			}
 		}
-		printf("\n");
+		printf("\n\n\n\n\n\n%d", tecla_pressionada);
 		//Imprime a matriz na tela
 		for( int y = 0 ; y < TAMANHO_Y ; y++ ){
 			printf("\t\t");
@@ -100,37 +103,4 @@ int movimenta_nave_Y(int posicao_nave_Y, char tecla_presionada, int tamanho_Y_te
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//1.0 - Definindo o loop principal, imprimindo a matriz, constantes e bibliotecas
-//1.1 - Colocar a nave na tela, movimentar a nave utilizando o teclado
-//1.2 - Colocar chuva de oponentes
 
