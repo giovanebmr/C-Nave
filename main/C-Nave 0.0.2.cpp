@@ -7,8 +7,8 @@
 	#include <windows.h> //para sons
 	
 	//Configuracoes iniciais............................................
-	const int TAMANHO_X = 20; //largura utilizavel da tela
-	const int TAMANHO_Y = 20; //altura utilizavel da tela
+	const int TAMANHO_X = 40; //largura utilizavel da tela
+	const int TAMANHO_Y = 40; //altura utilizavel da tela
 	const char ESPACO = '.'; //forma dos espacos na matriz
 	const char FORMATO_NAVE = 'T'; //forma da nave
 	const char SUBIR = 'w'; //movimento vertical para o topo
